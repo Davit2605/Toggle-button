@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: url("https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    width: 100%;
+  }
+  .input {
+    display: none;
+  }
+  .label {
+    background-color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+  .circle {
+    background-color: gray;
+    width: 34px;
+    height: 34px;
+    position: relative;
+    border-radius: 50%;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    cursor: pointer;
+    animation: toggleOff 0.4s linear forwards;
+  }
+
+  .input:checked + .label {
+    background-color: blue;
+    transition: background-color 1.5s;
+  }
+
+  .input:checked + .label .circle {
+    animation: toggleOn 0.4s linear forwards;
+    background-color: white;
+  }
+
+  @keyframes toggleOn {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(40px);
+    }
+  }
+
+  @keyframes toggleOff {
+    0% {
+      transform: translateX(40px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .fa-wifi {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 100px;
+    left: 45%;
+  }
+
+  .fa-wifi {
+    color: white;
+  }
+
+  .active.fa-wifi {
+    color: blue;
+    transition: color 3s;
+  }
+  
+  .onOff {
+    color: green;
+    font-size: 25px;
+    position: absolute;
+    top: 35%;
+  }
