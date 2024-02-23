@@ -75,7 +75,7 @@ body {
 
   .active.fa-wifi {
     color: blue;
-    transition: color 3s;
+    transition: color 3s 0.4s;
   }
   
   .onOff {
